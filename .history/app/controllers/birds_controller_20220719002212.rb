@@ -1,5 +1,5 @@
 class BirdsController < ApplicationController
-  wrap_parameters format: []
+
   # GET /birds
   def index
     birds = Bird.all
@@ -21,7 +21,6 @@ class BirdsController < ApplicationController
   def bird_params
     params.permit(:name, :species)
   end
-
   # GET /birds/:id
   def show
     bird = Bird.find_by(id: params[:id])
